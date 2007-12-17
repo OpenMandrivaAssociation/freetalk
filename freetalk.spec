@@ -10,7 +10,6 @@ Patch: freetalk-0.69-guile.patch
 License:	GPL
 Group:		Networking/Instant messaging
 Url:		http://freetalk.nongnu.org/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: loudmouth-devel guile-devel
 BuildRequires: ncurses-devel readline-devel
 BuildRequires: gettext-devel
