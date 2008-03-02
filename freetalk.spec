@@ -1,9 +1,9 @@
 %define name freetalk
-%define release		%mkrel 4
+%define release		%mkrel 1
 
 Summary:    Console jabber client	
 Name:		%name
-Version:	0.69
+Version:	3.0
 Release:	%release
 Source0:	http://savannah.nongnu.org/download/%name/%name-%version.tar.bz2
 Patch: freetalk-0.69-guile.patch
@@ -24,7 +24,7 @@ Freetalk is extensible, configurable, and scriptable through a Guile interface.
 %prep
 %setup -q
 %patch -p1
-aclocal -I m4
+aclocal 
 autoconf
 automake -a -c
 
