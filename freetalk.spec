@@ -1,19 +1,21 @@
 %define name freetalk
-%define release		%mkrel 3
+%define release		%mkrel 4
 
 Summary:    Console jabber client	
 Name:		%name
 Version:	3.0
 Release:	%release
 Source0:	http://savannah.nongnu.org/download/%name/%name-%version.tar.bz2
-Patch: freetalk-0.69-guile.patch
+Patch: freetalk-3.0-guile.patch
 License:	GPL
 Group:		Networking/Instant messaging
 Url:		http://freetalk.nongnu.org/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: loudmouth-devel guile-devel
-BuildRequires: ncurses-devel readline-devel
+BuildRequires: loudmouth-devel
+BuildRequires: guile-devel
+BuildRequires: ncurses-devel
+BuildRequires: readline-devel
 BuildRequires: gettext-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Freetalk is a console based Jabber client. It features a readline interface 
