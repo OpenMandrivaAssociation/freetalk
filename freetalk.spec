@@ -1,13 +1,12 @@
 %define name freetalk
-%define release		%mkrel 4
+%define release		%mkrel 1
 
 Summary:    Console jabber client	
 Name:		%name
-Version:	3.0
+Version:	3.2
 Release:	%release
 Source0:	http://savannah.nongnu.org/download/%name/%name-%version.tar.bz2
-Patch: freetalk-3.0-guile.patch
-License:	GPL
+License:	GPLv2+
 Group:		Networking/Instant messaging
 Url:		http://freetalk.nongnu.org/
 BuildRequires: loudmouth-devel
@@ -25,10 +24,6 @@ Freetalk is extensible, configurable, and scriptable through a Guile interface.
 
 %prep
 %setup -q
-%patch -p1
-aclocal 
-autoconf
-automake -a -c
 
 %build
 %configure2_5x
@@ -40,7 +35,7 @@ automake -a -c
 # G_FILENAME_ENCODING=@locale
 #
 # so we need to remove this 
-unset  $(env | grep '=@' | sed 's/=.*//') 
+#unset  $(env | grep '=@' | sed 's/=.*//') 
 %make
 
 %install
