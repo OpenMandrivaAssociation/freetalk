@@ -6,6 +6,8 @@ Name:		%name
 Version:	3.2
 Release:	%release
 Source0:	http://savannah.nongnu.org/download/%name/%name-%version.tar.bz2
+Patch0:		freetalk-3.2-glibc210.patch
+Patch1:		freetalk-3.2-link.patch
 License:	GPLv2+
 Group:		Networking/Instant messaging
 Url:		http://freetalk.nongnu.org/
@@ -24,6 +26,8 @@ Freetalk is extensible, configurable, and scriptable through a Guile interface.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p0
 
 %build
 %configure2_5x
@@ -60,5 +64,3 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %_datadir/%name/extensions/first-time-run.sh
 %_mandir/man1/*
 %_infodir/*
-
-
