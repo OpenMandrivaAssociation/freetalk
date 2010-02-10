@@ -1,5 +1,5 @@
 %define name freetalk
-%define release		%mkrel 2
+%define release		%mkrel 3
 
 Summary:    Console jabber client	
 Name:		%name
