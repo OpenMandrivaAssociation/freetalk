@@ -1,0 +1,30 @@
+--- src/Makefile.am.link	2010-02-10 08:44:34.000000000 +0100
++++ src/Makefile.am	2010-02-10 08:45:08.000000000 +0100
+@@ -9,6 +9,6 @@
+ 	roster.h interpreter.h extensions.h primitives.h presence.h \
+ 	file_transfer.h register.h compat.h
+ 
+-freetalk_LDFLAGS=$(LOUDMOUTH_LIBS) $(GLIB_LIBS) $(GUILE_LDFLAGS)
++freetalk_LDADD=$(LOUDMOUTH_LIBS) $(GLIB_LIBS) $(GUILE_LDFLAGS)
+ 
+ CLEANFILES = *~
+--- src/Makefile.in.link	2010-02-10 08:45:14.000000000 +0100
++++ src/Makefile.in	2010-02-10 08:46:28.000000000 +0100
+@@ -50,7 +50,7 @@
+ 	primitives.$(OBJEXT) presence.$(OBJEXT) \
+ 	file_transfer.$(OBJEXT) register.$(OBJEXT) compat.$(OBJEXT)
+ freetalk_OBJECTS = $(am_freetalk_OBJECTS)
+-freetalk_LDADD = $(LDADD)
++freetalk_LDFLAGS = 
+ freetalk_LINK = $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) \
+ 	$(freetalk_LDFLAGS) $(LDFLAGS) -o $@
+ DEFAULT_INCLUDES = -I.@am__isrc@
+@@ -201,7 +201,7 @@
+ 	roster.h interpreter.h extensions.h primitives.h presence.h \
+ 	file_transfer.h register.h compat.h
+ 
+-freetalk_LDFLAGS = $(LOUDMOUTH_LIBS) $(GLIB_LIBS) $(GUILE_LDFLAGS)
++freetalk_LDADD = $(LOUDMOUTH_LIBS) $(GLIB_LIBS) $(GUILE_LDFLAGS)
+ CLEANFILES = *~
+ all: all-am
+ 
