@@ -10,7 +10,7 @@ Patch0:		freetalk-3.2-glibc210.patch
 Patch1:		freetalk-3.2-link.patch
 License:	GPLv2+
 Group:		Networking/Instant messaging
-Url:		http://freetalk.nongnu.org/
+Url:		https://freetalk.nongnu.org/
 BuildRequires: loudmouth-devel
 BuildRequires: guile-devel
 BuildRequires: ncurses-devel
