@@ -11,6 +11,11 @@ Patch1:		freetalk-3.2-link.patch
 License:	GPLv2+
 Group:		Networking/Instant messaging
 Url:		https://freetalk.nongnu.org/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: loudmouth-devel
 BuildRequires: guile-devel
 BuildRequires: ncurses-devel
